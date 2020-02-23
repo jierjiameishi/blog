@@ -1,0 +1,13 @@
+<div class="widget widget-archives">
+    <h3 class="widget-title">
+        <ul>
+            {% for date in date_list %}
+                <li>
+                    <a href="{% url 'jier:archive' date.year date.month %}">{{ date.year }}年{{ date.month }}</a>
+                </li>
+            {% empty %}
+                暂无归档！！！
+            {% endfor %}
+        </ul>
+    </h3>
+</div>
