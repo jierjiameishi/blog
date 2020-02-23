@@ -6,6 +6,9 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
+pymysql = "*"
+mysqlclient = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.6"
