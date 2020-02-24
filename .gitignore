@@ -127,6 +127,7 @@ dmypy.json
 .gitignore
 .idea/workspace.xml
 _credentials.py
+blog/settings/common.py
 blog/__pycache__/
 comments/__pycache__/
 comments/migrations/__pycache__/
