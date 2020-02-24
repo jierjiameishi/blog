@@ -12,6 +12,7 @@ mysqlclient = "*"
 gunicorn = "*"
 django = "*"
 markdown = "*"
+fabric = "*"
 
 [requires]
 python_version = "3.6"

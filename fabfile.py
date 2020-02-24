@@ -20,10 +20,10 @@ def _get_github_auth_responders():
 
 @task()
 def deploy(c):
-    supervisor_conf_path = '~/etc/'
-    supervisor_program_name = 'hellodjango-blog-tutorial'
+    supervisor_conf_path = '/home/django-python/supervisor'
+    supervisor_program_name = 'blog'
 
-    project_root_path = '~/apps/HelloDjango-blog-tutorial/'
+    project_root_path = '/home/django-python'
 
     # 先停止应用
     with c.cd(supervisor_conf_path):
