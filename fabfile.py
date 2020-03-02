@@ -23,7 +23,7 @@ def deploy(c):
     supervisor_conf_path = '/home/django-python/supervisor'
     supervisor_program_name = 'blog'
 
-    project_root_path = '/home/django-python'
+    project_root_path = '/home/django-python/'
 
     # 先停止应用
     with c.cd(supervisor_conf_path):
@@ -40,7 +40,7 @@ def deploy(c):
     with c.cd(project_root_path):
         c.run('pipenv install --deploy --ignore-pipfile')
         c.run('pipenv run python manage.py migrate')
-        c.run('pipenv run python collectstatic --noinput')
+        c.run('pipenv run python collectstatic manage.py --noinput')
 
     # 重新启动应用
     with c.cd(supervisor_conf_path):
